@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicine Delivery | e-Kwivuza</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f0f4f8;display:flex;justify-content:center;align-items:flex-start;padding:2rem;}
+form{background:#fff;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);width:100%;max-width:500px;}
+label{display:block;margin-top:1rem;}
+input{width:100%;padding:0.5rem;margin-top:0.5rem;border-radius:5px;border:1px solid #ccc;}
+button{margin-top:1.5rem;width:100%;padding:0.75rem;background:#2a9d8f;color:#fff;border:none;border-radius:5px;cursor:pointer;}
+button:hover{background:#21867a;}
+#result{margin-top:1rem;color:green;font-weight:bold;}
+</style>
+</head>
+<body>
+<form id="pharmacyForm">
+  <h2>Order Medicine</h2>
+  <label for="patientName">Patient Name</label>
+  <input type="text" id="patientName" required>
+  <label for="medicine">Medicine</label>
+  <input type="text" id="medicine" required>
+  <label for="quantity">Quantity</label>
+  <input type="number" id="quantity" required>
+  <label for="address">Delivery Address</label>
+  <input type="text" id="address" required>
+  <button type="submit">Place Order</button>
+  <div id="result"></div>
+</form>
+
+<script>
+document.getElementById('pharmacyForm')?.addEventListener('submit', e=>{
+  e.preventDefault();
+  const name=document.getElementById('patientName').value.trim();
+  const med=document.getElementById('medicine').value.trim();
+  const qty=document.getElementById('quantity').value.trim();
+  const addr=document.getElementById('address').value.trim();
+  if(!name||!med||!qty||!addr){alert("Fill all fields");return;}
+  document.getElementById('result').innerText=`Order placed: ${qty} x ${med} for ${name}. Delivery to ${addr}.`;
+});
+</script>
+</body>
+</html>

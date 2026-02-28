@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Appointment | e-Kwivuza</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f0f4f8;display:flex;justify-content:center;align-items:center;padding:2rem;}
+form{background:#fff;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);width:100%;max-width:500px;}
+label{display:block;margin-top:1rem;}
+input,select{width:100%;padding:0.5rem;margin-top:0.5rem;border-radius:5px;border:1px solid #ccc;}
+button{margin-top:1.5rem;width:100%;padding:0.75rem;background:#2a9d8f;color:#fff;border:none;border-radius:5px;cursor:pointer;}
+button:hover{background:#21867a;}
+#result{margin-top:1rem;color:green;font-weight:bold;}
+</style>
+</head>
+<body>
+<form id="appointmentForm">
+  <h2>Book an Appointment</h2>
+  <label for="doctor">Select Doctor</label>
+  <select id="doctor" required>
+    <option value="">--Select--</option>
+    <option>Dr. John Doe (General)</option>
+    <option>Dr. Mary Smith (Pediatrician)</option>
+    <option>Dr. Paul Kim (Cardiologist)</option>
+    <option>Dr. Sarah Lee (Dermatologist)</option>
+  </select>
+  <label for="date">Date</label>
+  <input type="date" id="date" required>
+  <label for="time">Time</label>
+  <input type="time" id="time" required>
+  <button type="submit">Book</button>
+  <div id="result"></div>
+</form>
+<script src="js/appointment.js"></script>
+</body>
+</html>

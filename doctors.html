@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctors | e-Kwivuza</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f0f4f8;color:#333;}
+header{background:#264653;color:#fff;padding:1rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;}
+nav a{color:#fff;text-decoration:none;margin-left:1rem;}
+nav a:hover{color:#e9c46a;}
+.doctors{padding:2rem;}
+.doctors h2{text-align:center;margin-bottom:1.5rem;}
+.doctor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
+.card{background:#fff;padding:1.5rem;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+.card h3{margin-bottom:0.5rem;}
+.card p{margin-bottom:0.25rem;}
+</style>
+</head>
+<body>
+<header>
+  <div><a href="index.html" style="color:white;font-weight:bold;">e-Kwivuza</a></div>
+  <nav>
+    <a href="services.html">Services</a>
+    <a href="appointment.html">Book Appointment</a>
+    <a href="facilities.html">Facilities</a>
+  </nav>
+</header>
+
+<section class="doctors">
+  <h2>Our Doctors</h2>
+  <div class="doctor-grid">
+    <div class="card">
+      <h3>Dr. John Doe</h3>
+      <p>Specialty: General Physician</p>
+      <p>Availability: Mon-Fri 9am-5pm</p>
+    </div>
+    <div class="card">
+      <h3>Dr. Mary Smith</h3>
+      <p>Specialty: Pediatrician</p>
+      <p>Availability: Mon-Thu 10am-4pm</p>
+    </div>
+    <div class="card">
+      <h3>Dr. Paul Kim</h3>
+      <p>Specialty: Cardiologist</p>
+      <p>Availability: Tue-Fri 11am-3pm</p>
+    </div>
+    <div class="card">
+      <h3>Dr. Sarah Lee</h3>
+      <p>Specialty: Dermatologist</p>
+      <p>Availability: Mon-Wed 9am-2pm</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
